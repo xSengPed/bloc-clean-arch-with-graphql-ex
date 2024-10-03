@@ -1,8 +1,9 @@
 part of 'todo_bloc.dart';
 
 @immutable
-sealed class TodoEvent {}
+sealed class TodoEvent extends Equatable {}
 
-class OnLoading extends TodoEvent {}
-
-class OnFinish extends TodoEvent {}
+class FetchTodo extends TodoEvent {
+  @override
+  List<Object> get props => [];
+}

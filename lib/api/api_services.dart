@@ -15,9 +15,9 @@ class ApiServices {
     _api = dio;
   }
 
-  static Future<List<Todo>> getTodo() async {
+  Future<List<Todo>> getTodo() async {
     final serviceRes = await _api.get("/todos");
-    await Future.delayed(const Duration(seconds: 5));
+    // await Future.delayed(const Duration(seconds: 5));
     return List.generate(
       serviceRes.data.length,
       (index) {

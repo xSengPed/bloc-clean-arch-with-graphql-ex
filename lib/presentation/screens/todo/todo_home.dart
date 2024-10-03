@@ -25,7 +25,7 @@ class TodoHome extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               }
-              if (state is TodoList) {
+              if (state is TodoLoaded) {
                 return ListView.builder(
                     itemCount: state.todos.length,
                     itemBuilder: (context, index) {

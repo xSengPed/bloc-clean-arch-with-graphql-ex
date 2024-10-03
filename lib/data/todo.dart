@@ -25,4 +25,18 @@ class Todo {
     data['completed'] = completed;
     return data;
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! Todo) return false;
+    return userId == other.userId &&
+        id == other.id &&
+        title == other.title &&
+        completed == other.completed;
+  }
+
+  @override
+  int get hashCode =>
+      userId.hashCode ^ id.hashCode ^ title.hashCode ^ completed.hashCode;
 }
