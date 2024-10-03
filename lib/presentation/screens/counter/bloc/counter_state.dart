@@ -7,5 +7,6 @@ final class CounterInitial extends CounterState {}
 
 class Counter extends CounterState {
   final int value;
+
   Counter(this.value);
 }

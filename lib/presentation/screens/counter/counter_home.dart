@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:bloc_graphql_implements_101/presentation/screens/counter/bloc/counter_bloc.dart';
+import 'package:bloc_graphql_implements_101/presentation/screens/todo/todo_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,6 +30,24 @@ class CounterHome extends StatelessWidget {
                 },
                 bloc: bloc),
             const Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 0, padding: const EdgeInsets.all(10)),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const TodoHome()));
+                          },
+                          child: const Text("Todo")))
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

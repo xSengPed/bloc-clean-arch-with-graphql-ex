@@ -8,3 +8,5 @@ class Increment extends CounterEvent {}
 class Decrement extends CounterEvent {}
 
 class Reset extends CounterEvent {}
+
+class FetchEvent extends CounterEvent {}
